@@ -1,6 +1,6 @@
 {% set name = "entsoe-py" %}
-{% set version = "0.3.2" %}
-{% set sha256 = "265d392d7d9d4bf6476af5035411783b63f76671098e66abfc466721bf344339" %}
+{% set version = "0.3.4" %}
+{% set sha256 = "6f00633d7333d4db355c5da90fd9c370cec0237b11c1e3945fac606b8b5fc29b" %}
 
 package:
   name: {{ name|lower }}
@@ -14,10 +14,10 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vvv "
+  script: '{{ PYTHON }} -m pip install . -vvv '
 
 requirements:
-  host: 
+  host:
     - python >=3.6
     - pip
   run:
@@ -35,7 +35,7 @@ about:
   home: https://github.com/EnergieID/entsoe-py
   license: MIT
   license_file: LICENSE
-  summary: 'Python client for the ENTSO-E API (european network of transmission system operators for electricity)'
+  summary: Python client for the ENTSO-E API (european network of transmission system operators for electricity)
   dev_url: https://github.com/EnergieID/entsoe-py
 
 extra:
