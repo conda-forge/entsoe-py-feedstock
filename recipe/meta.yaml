@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . -vvv '
 
 requirements:
@@ -26,6 +26,9 @@ requirements:
     - python >=3.6
     - pytz
     - requests
+    - geojson-rewind
+    - python-dateutil
+    - geopandas
 
 test:
   imports:
