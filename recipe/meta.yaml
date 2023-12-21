@@ -1,6 +1,6 @@
 {% set name = "entsoe-py" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "3c84335333b0c97ec64e9d85d2ab54dad87e6786776bd816849a1fd938d0f723" %}
+{% set version = "0.6.1" %}
+{% set sha256 = "fa7e998f382761cd42c29b1ad398889aadd8335485d60b05024d71a3104a50e4" %}
 
 package:
   name: {{ name|lower }}
