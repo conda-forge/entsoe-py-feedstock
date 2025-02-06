@@ -1,38 +1,39 @@
 {% set name = "entsoe-py" %}
 {% set version = "0.6.11" %}
-{% set sha256 = "6f317b34fee4c656e4eb4b3c73c0593f3ef4bd3866564956e46304ae411906e7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6f317b34fee4c656e4eb4b3c73c0593f3ef4bd3866564956e46304ae411906e7
 
 build:
   noarch: python
-  number: 0
-  script: '{{ PYTHON }} -m pip install . -vvv '
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vvv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - beautifulsoup4
-    - pandas
-    - python >=3.6
-    - pytz
+    - python >={{ python_min }}
     - requests
-    - geojson-rewind
-    - python-dateutil
-    - geopandas
+    - pytz
+    - beautifulsoup4 >=4.11.1
+    - pandas >=2.2.0
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   imports:
     - entsoe
+  commands:
+    - pip check
 
 about:
   home: https://github.com/EnergieID/entsoe-py
@@ -44,3 +45,4 @@ about:
 extra:
   recipe-maintainers:
     - FabianHofmann
+    - xylar
