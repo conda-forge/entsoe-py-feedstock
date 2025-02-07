@@ -148,6 +148,3 @@ Feedstock Maintainers
 * [@FabianHofmann](https://github.com/FabianHofmann/)
 * [@xylar](https://github.com/xylar/)
 
-
-<!-- dummy commit to enable rerendering -->
-
