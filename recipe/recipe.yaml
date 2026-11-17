@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: entsoe-py
   version: "1.0.0"
+  python_min: "3.12"
 
 package:
   name: ${{ name|lower }}
@@ -21,20 +22,24 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
+    - hatchling
+    - hatch-vcs
     - setuptools
   run:
     - python >=${{ python_min }}
     - requests
     - pytz
-    - beautifulsoup4 >=4.11.1
     - pandas >=2.2.0
+    - beautifulsoup4 >=4.11.1
 
 tests:
   - python:
       imports:
         - entsoe
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   license: MIT
