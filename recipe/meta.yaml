@@ -1,5 +1,5 @@
 {% set name = "entsoe-py" %}
-{% set version = "0.8.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/entsoe_py-{{ version }}.tar.gz
-  sha256: 4c956fc655f7c0c93941ac8577816bc45a31b42d587772b3efceb3fd705cbf84
+  sha256: 5358851db11985f68123e73ebcdbab82a417eff4a1732a109a9c8b1298d533ac
 
 build:
   noarch: python
