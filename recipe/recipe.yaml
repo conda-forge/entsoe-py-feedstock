@@ -42,7 +42,7 @@ tests:
 
 about:
   license: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE.md
   summary: Python client for the ENTSO-E API (european network of transmission system operators for electricity)
   homepage: https://github.com/EnergieID/entsoe-py
   repository: https://github.com/EnergieID/entsoe-py
