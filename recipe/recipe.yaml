@@ -24,7 +24,6 @@ requirements:
     - pip
     - hatchling
     - hatch-vcs
-    - setuptools
   run:
     - python >=${{ python_min }}
     - requests
